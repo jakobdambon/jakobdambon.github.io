@@ -2,4 +2,58 @@
 title: "My Website"
 ---
 
-Hello, World!
+<style>
+
+  .column {
+    float: left;
+  }
+  
+  .left {
+      width: 66%;
+  }
+  
+  .right {
+      width: 34%;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .twitter-timeline {
+    height: 700px !important;
+  }
+  
+  img {
+    border-radius: 50%;
+  }
+  
+</style>
+
+<div class="row">
+  <div class="column left">
+Sidebar 
+-----------------------------------
+
+
+
+
+Column
+-----------------------------------
+
+hi!
+  </div>
+  
+  <div class="column right">
+  
+  <img src="test.jpg" alt="Avatar">
+  
+  <a class="twitter-timeline" data-height="700" href="https://twitter.com/JakobDambon?ref_src=twsrc%5Etfw">Tweets by JakobDambon</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  
+  
+  </div>
+</div>  
+  
+

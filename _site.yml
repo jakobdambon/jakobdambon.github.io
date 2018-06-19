@@ -20,6 +20,7 @@ navbar:
       href: https://twitter.com/JakobDambon
     - icon: fa-linkedin fa-lg
       href: https://www.linkedin.com/in/jakob-dambon-141188108/
+
 output:
   html_document:
     theme: paper

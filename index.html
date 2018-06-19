@@ -229,7 +229,47 @@ $(document).ready(function () {
 </div>
 
 
-<p>Hello, World!</p>
+<style>
+
+  .column {
+    float: left;
+  }
+  
+  .left {
+      width: 66%;
+  }
+  
+  .right {
+      width: 34%;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .twitter-timeline {
+    height: 700px !important;
+  }
+  
+  img {
+    border-radius: 50%;
+  }
+  
+</style>
+<div class="row">
+<div class="column left">
+<h2 id="sidebar">Sidebar</h2>
+<h2 id="column">Column</h2>
+hi!
+</div>
+<div class="column right">
+<p><img src="test.JPG" alt="Avatar"></p>
+<a class="twitter-timeline" data-height="700" href="https://twitter.com/JakobDambon?ref_src=twsrc%5Etfw">Tweets by JakobDambon</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
 
 
 
