@@ -3,8 +3,8 @@ output_dir: "."
 navbar:
   title: "Jakob A. Dambon"
   left:
-    - text: "Writing"
-      href: research.html
+    - text: "CV"
+      href: CV.html
     - text: "Speaking"
       href: talks.html
     - text: "Programming"

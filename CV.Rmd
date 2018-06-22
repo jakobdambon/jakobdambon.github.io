@@ -1,0 +1,20 @@
+---
+title: "Curriculum Vitae"
+output: html_document
+---
+
+
+Education
+--------------------------------
+
+<ul>
+  <ed> 2017 - now:</ed> PhD student 
+  
+  <ed> 2010 - 2016:</ed> msC student 
+</ul>
+
+
+Professional Experience
+--------------------------------
+
+work

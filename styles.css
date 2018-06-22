@@ -1,2 +1,32 @@
+body {
+  font-size: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ed {
+  padding-left: 1.3em;
+}
+
+ed:before {
+  content: "\f19d";
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em;
+  width: 1.3em;
+}
 
 
+ed:after {
+  display: inline-block;
+  margin-left: 5em;
+  width: 5em;
+  background-color:red;
+}
+
+.left {
+  float:left;
+}
