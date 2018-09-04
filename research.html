@@ -11,7 +11,7 @@
 
 
 
-<title>Curriculum Vitae</title>
+<title>Research</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -225,26 +225,39 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Curriculum Vitae</h1>
+<h1 class="title toc-ignore">Research</h1>
 
 </div>
 
 
-<div id="education" class="section level2">
-<h2>Education</h2>
-<ul class="ed-list">
-<p><ed> <span class="first">2017 - now:</span> <span class="second"><strong>PhD student in Biostatistics</strong>, <br> Researching spatial and spatio-temporal models with application on house market prices, see <a href="research.html">Research</a> for further information. </span> <span class="third">University of Zurich </span> </ed></p>
-<p><ed> <span class="first">2010 - 2016:</span> <span class="second"><strong>BSc and MSc student in Mathematics</strong>, <br> With focus on Statistics and Machine Learning during Master studies. </span> <span class="third">ETH Zurich</span> </ed></p>
-<ed> <span class="first">2001 - 2010:</span> <span class="second"><strong>Pupil</strong>, <br> Graduation with German Abitur. </span> <span class="third">Quirinus-Gymnasium, Neuss (Germany)</span> </ed>
-</ul>
+<div id="spatially-varying-coefficients-models" class="section level2">
+<h2>Spatially Varying Coefficients Models</h2>
+<div id="introduction" class="section level3">
+<h3>Introduction</h3>
+<p>One of the most known regression methods is the Ordinary Least Squares (OLS). It is easy to model and interpret. However, when dealing with <em>spatial data</em>, the model assumptions usually do not hold anymore. More specifically, observations that are close in distance are more dependent than observations which are far apart. That is were geo-statistical methods come into play.</p>
+<p>With these methods, we try to explain the <em>residual dependencies</em> with, say, a Gaussian Process. These proceeses capture the dependency on the observations via distance in its covariance function. Finally, using geo-statistical methods we model covariates as a fixed external trend while we let the intercept vary over space.</p>
 </div>
-<div id="professional-experience" class="section level2">
-<h2>Professional Experience</h2>
-<ul class="non-list">
-<p><ne><span class="first">2017 - now:</span> <span class="second"><strong>Research Associate at Lucerne Business School</strong>, <br> Project-based work on Data Analytics, statistical analysis and implementations of Machine Learning solutions<br> </span> <span class="third">HSLU, Lucerne</span></ne></p>
-<p><ne><span class="first">2016 - 2017:</span> <span class="second"><strong>Statistical Consultant at the Seminar for Statistics</strong>, <br> Assisting students and researchers affiliated with ETH Zurich as well as external companies in statistical evaluation – Teaching assistant in <a href="https://www.math.ethz.ch/sfs/education/advanced-studies.html">CAS / DAS “Applied Statistics”</a> – Giving R introduction courses </span> <span class="third">ETH Zurich</span></ne></p>
-<ne><span class="first">2016:</span> <span class="second"><strong>Internship as a Consultant</strong>, <br> 3 months internship at an insurance company located in Germany – Engineering software solutions in Excel and VBA – Assisting the implementation of Solvency II </span> <span class="third">d-fine GmbH, Frankfurt (Germany)</span></ne>
-</ul>
+<div id="motivation" class="section level3">
+<h3>Motivation</h3>
+<p>The Spatially Varying Coefficients (SVC) Models generalizes the idea of geo-statistical methods. Instead of fixed external trends, we allow to model some or all covariates in the same way as we would the intercept in geo-statistical methods. That is, we allow the <em>covariates effects vary over space</em>.</p>
+<p><strong>Example</strong>: Say we have 100 locations where we sample data of one response y and two covariates. In order to fit an intercept, we add one covariate (X1) which is equal to one at each sample location. The other two covariates we name X2 and X3. The avaiable data thus may look like this:</p>
+<div class="figure">
+<img src="sp_data_plot.jpg" alt="Sampled data at 100 locations." />
+<p class="caption">Sampled data at 100 locations.</p>
+</div>
+<p>So, say, the data are apartment transactions where y is the transaction price, X2 is the floor area and X3 is the year when the aparment has been built. What we do not know and what we try to estiamte are the SVC, i.e. the generating process.</p>
+<div class="figure">
+<img src="sp_effs_plot.jpg" alt="The unknown SVC model at the same loactions. Effects 1 to 3 correspond to the intercept and the two measured covariates, effect 4 is the nugget which has no spatial dependency and can be regarded as the measuring error. We are interested in estimaing effects 1 to 3." />
+<p class="caption">The unknown SVC model at the same loactions. Effects 1 to 3 correspond to the intercept and the two measured covariates, effect 4 is the nugget which has no spatial dependency and can be regarded as the measuring error. We are interested in estimaing effects 1 to 3.</p>
+</div>
+<p>The underlying equation is based on the one from OLS, but the effect sizes vary over space, i.e. they are not constant. Thus, given a location <span class="math inline">\(\huge{s}\)</span>, the model formula in our example is</p>
+<p><span class="math display">\[\huge{y(s) = \beta_1(s) + \beta_2(s) x^{(2)} + \beta_3(s) x^{(3)} + \varepsilon(s)} \]</span></p>
+<p>where the betas correspond to effect 1 to effect 3 and epsilon, i.e. the nugget, corresponds to effect 4. So, in the end we want to estimate the effect sizes at given locations.</p>
+</div>
+<div id="work-on-package" class="section level3">
+<h3>Work on Package</h3>
+<p>There are several methods how to model and predict SVC models. We are currently working on an R package that allows to fit large data sets with several covariates. Stay tuned for updates!</p>
+</div>
 </div>
 
 <div id = "footer", font-color = "Gray">

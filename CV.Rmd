@@ -7,14 +7,55 @@ output: html_document
 Education
 --------------------------------
 
-<ul>
-  <ed> 2017 - now:</ed> PhD student 
+
+<ul class = "ed-list">
+  <ed> 
+    <span class="first">2017 - now:</span>
+    <span class="second">**PhD student in Biostatistics**, <br> 
+    Researching spatial and spatio-temporal models with application on house market prices, see [Research](research.html) for further information.
+    </span>
+    <span class="third">University of Zurich </span>
+  </ed>  
   
-  <ed> 2010 - 2016:</ed> msC student 
+  
+  <ed>
+    <span class="first">2010 - 2016:</span>
+    <span class="second">**BSc and MSc student in Mathematics**, <br>
+    With focus on Statistics and Machine Learning during Master studies.
+    </span>
+    <span class="third">ETH Zurich</span>
+  </ed>
+  
+   <ed>
+    <span class="first">2001 - 2010:</span>
+    <span class="second">**Pupil**, <br>
+    Graduation with German Abitur.
+    </span>
+    <span class="third">Quirinus-Gymnasium, Neuss (Germany)</span>
+  </ed>
 </ul>
+
 
 
 Professional Experience
 --------------------------------
 
-work
+<ul class = "non-list">
+  <ne><span class="first">2017 - now:</span>
+    <span class="second">**Research Associate at Lucerne Business School**, <br>
+    Project-based work on Data Analytics, statistical analysis and implementations of Machine Learning solutions<br> </span>
+    <span class="third">HSLU, Lucerne</span></ne> 
+    
+    
+  <ne><span class="first">2016 - 2017:</span>
+    <span class="second">**Statistical Consultant at the Seminar for Statistics**, <br>
+    Assisting students and researchers affiliated with ETH Zurich as well as external companies in statistical evaluation -- Teaching assistant in [CAS / DAS "Applied Statistics"](https://www.math.ethz.ch/sfs/education/advanced-studies.html) -- Giving R introduction courses
+    </span>
+    <span class="third">ETH Zurich</span></ne> 
+    
+    
+  <ne><span class="first">2016:</span>
+    <span class="second">**Internship as a Consultant**, <br>
+    3 months internship at an insurance company located in Germany -- Engineering software solutions in Excel and VBA -- Assisting the implementation of Solvency II </span>
+    <span class="third">d-fine GmbH, Frankfurt (Germany)</span></ne>
+</ul>

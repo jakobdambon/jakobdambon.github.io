@@ -4,7 +4,6 @@ title: "Welcome to My Website!"
 
 <style>
   
-
   
   .column {
     float: left;
@@ -12,6 +11,8 @@ title: "Welcome to My Website!"
   
   .left {
       width: 66%;
+      padding-right: 3em;
+
   }
   
   .right {
@@ -25,7 +26,7 @@ title: "Welcome to My Website!"
   }
   
   .twitter-timeline {
-    height: 700px !important;
+    height: 400px !important;
   }
   
   img {
@@ -40,21 +41,22 @@ title: "Welcome to My Website!"
 Let Me Introduce Myself 
 -----------------------------------
 
-I am a statistician and PhD candidate in Biostatistics at the University of Zurich (UZH), Switzerland. My research interests lie in spatial and spatio-temporal statistics, both with frequentist and Bayesian approaches. My supervisor is Prof. Dr. Reinhard Furrer from the Institute of Mathematics, UZH. In joint work with the Lucerne University of Applied Sciences and Arts (HSLU), I am currently working on modelling house market prizes. Here, my supervisor is Dr. Fabio Sigrist.
+I am a statistician and PhD candidate in Biostatistics at the *University of Zurich* (UZH), Switzerland. My research interests lie in spatial and spatio-temporal statistics, both with frequentest and Bayesian approaches. My supervisor is Prof. Dr. Reinhard Furrer from the Institute of Mathematics, UZH. In joint work with the *Lucerne University of Applied Sciences and Arts* (HSLU), I am currently working on modelling house market prizes. Here, my supervisor is Dr. Fabio Sigrist.
 
-Furthermore, I am a research assistant at the Lucerne School of Business, Switzerland. Here, I work on projects covering Data Analytics, statistical analysis and implemenations of Machine Learning methods. I share my experience with colleagues at the Machine Learning Clinic organized by the Swiss Alliance for Data-Intensive Services.
+Furthermore, I am a research assistant at the *Lucerne School of Business* which is part of HSLU. I work on projects covering Data Analytics, statistical analysis and implementations of Machine Learning methods. I share my experience with colleagues at the Machine Learning Clinic and Spatial Data Analytics expert group organized by the Swiss Alliance for Data-Intensive Services.
 
-I am an R enthusiast and an active participant at the Zurich R User Group meet-ups. 
+I am an [R](https://www.r-project.org/) enthusiast and an active participant at the Zurich R User Group meet-ups. 
 
 Overview of My Affiliations
 -----------------------------------
 
 - [Institute of Mathematics, UZH](https://www.math.uzh.ch/index.php?id=home)
-- [Prof. Dr. Reinhard Furrer](https://www.math.uzh.ch/index.php?id=people&key1=4087)
+- [Prof. Dr. Reinhard Furrer](https://www.math.uzh.ch/index.php?id=people&id=people&key1=4087&L=1) (UZH)
 - [Lucerne School of Business, HSLU](https://www.hslu.ch/de-ch/wirtschaft/institute/ifz) (website in German)
-- [Dr. Fabio Sigrist](https://www.hslu.ch/de-ch/hochschule-luzern/ueber-uns/personensuche/profile/?pid=3064)
-- [Swiss Alliance for Data-Intensive Services](https://data-service_alliance.ch)
-- [Zurich R User Group](https://www.meetup.com/Zurich-R-User_group/)
+- [Dr. Fabio Sigrist](https://www.hslu.ch/en/lucerne-university-of-applied-sciences-and-arts/about-us/people-finder/profile/?pid=3064) (HSLU)
+- [Swiss Alliance for Data-Intensive Services](https://data-service-alliance.ch)
+- [Zurich R User Group](https://www.meetup.com/Zurich-R-User-group/)
+
 
 
   </div>
@@ -63,7 +65,7 @@ Overview of My Affiliations
   
   <img src="me.jpg" alt="Avatar">
   
-  <a class="twitter-timeline" data-height="700" href="https://twitter.com/JakobDambon?ref_src=twsrc%5Etfw">Tweets by JakobDambon</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <a class="twitter-timeline" data-height="400" href="https://twitter.com/JakobDambon?ref_src=twsrc%5Etfw">Tweets by JakobDambon</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   
   
   </div>
