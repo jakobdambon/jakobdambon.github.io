@@ -50,6 +50,7 @@ I am an [R](https://www.r-project.org/) enthusiast and an active participant at 
 Overview of My Affiliations
 -----------------------------------
 
+- [Applied Statistics Workgroup, UZH](https://www.math.uzh.ch/as/)
 - [Institute of Mathematics, UZH](https://www.math.uzh.ch/index.php?id=home)
 - [Prof. Dr. Reinhard Furrer](https://www.math.uzh.ch/index.php?id=people&id=people&key1=4087&L=1) (UZH)
 - [Lucerne School of Business, HSLU](https://www.hslu.ch/de-ch/wirtschaft/institute/ifz) (website in German)
