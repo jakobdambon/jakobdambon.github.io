@@ -1,319 +1,498 @@
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jakob A. Dambon</title>
 
-<meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="pandoc" />
+  <!-- SEO: basic metadata (update URLs/placeholders to your domain) -->
+  <meta name="description" content="Jakob A. Dambon — Data Scientist. Expertise in AI/GenAI for insurance, spatial statistics, and scalable ML solutions. PhD in Biostatistics.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dambon.me/">
+  <link rel="alternate" href="https://dambon.me/" hreflang="en">
+  <link rel="alternate" href="https://dambon.me/" hreflang="de">
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jakob A. Dambon — Data Scientist">
+  <meta property="og:description" content="Expert in AI/GenAI for insurance, spatial statistics, and scalable ML solutions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dambon.me/">
 
-
-
-<title>Welcome to My Website!</title>
-
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
-<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
-<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
-
-<style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Jakob A. Dambon — Data Scientist">
+  <meta name="twitter:description" content="Expert in AI/GenAI for insurance, spatial statistics, and scalable ML solutions.">
 
 
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --accent: #2563eb;
+      --link: #2563eb;
+      --card: #f5f5f5;
+    }
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+    [data-theme="dark"] {
+      --bg: #0f172a;
+      --text: #e5e7eb;
+      --accent: #3b82f6;
+      --link: #93c5fd;
+      --card: #1e293b;
+    }
 
-<link rel="stylesheet" href="styles.css" type="text/css" />
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
 
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 1rem;
+    }
+    
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      padding: 1rem 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    nav {
+      display: none;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 0.4rem;
+      align-items: center;
+    }
+
+    .lang-switch button {
+      border: 1px solid var(--text);
+      background: none;
+      color: var(--text);
+      padding: 0.4rem 0.6rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .lang-switch button.active {
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    #top-button {
+      border: 1px solid var(--text);
+      background: none;
+      color: var(--text);
+      padding: 0.4rem 0.6rem;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .controls {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .menu-btn {
+      display: block;
+    }
+
+    /* Make mobile menu button clearly readable in both themes */
+    .menu-btn {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+      padding: 0.4rem 0.6rem;
+    }
+
+    .menu-btn.open {
+      background: var(--bg);
+      color: var(--text);
+      border-color: var(--text);
+    }
+
+    /* Mobile menu */
+    nav.active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: var(--card);
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    /* Desktop */
+    @media (min-width: 768px) {
+      nav {
+        display: flex;
+        position: static;
+      }
+
+      .menu-btn {
+        display: none;
+      }
+    }
+
+    button {
+      background: none;
+      border: 1px solid var(--text);
+      padding: 0.4rem 0.6rem;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    /* Link color for accessibility in both themes */
+    a {
+      color: var(--link);
+      text-decoration: underline;
+    }
+
+    a:focus,
+    a:hover {
+      opacity: 0.95;
+    }
+
+    section {
+      margin-bottom: 3rem;
+      max-width: 800px;
+      scroll-margin-top: 100px;
+    }
+
+    /* Indent bullets in the About section */
+    #about ul {
+      margin-left: 1.2rem;
+      padding-left: 1.2rem;
+      list-style-position: outside;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      border-bottom: 1px solid var(--card);
+      padding-bottom: 0.3rem;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      body {
+        padding: 2rem;
+      }
+
+      .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Skip-link visible on focus */
+    .skip-link:focus {
+      position: static;
+      left: 0.75rem;
+      top: 0.75rem;
+      width: auto;
+      height: auto;
+      background: var(--card);
+      color: var(--text);
+      padding: 0.4rem 0.6rem;
+      border-radius: 6px;
+      z-index: 200;
+    }
+  </style>
 </head>
 
 <body>
 
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
-img {
-  max-width:100%;
-  height: auto;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-</style>
+  <!-- Accessibility: skip link to main content -->
+  <a class="skip-link" href="#main" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
 
 
-<style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 64px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
+<header>
+  <div class="brand"><strong>Jakob A. Dambon</strong></div>
 
-.section h2 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h3 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h4 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h5 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h6 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-</style>
+  <nav id="nav">
+    <a href="#about" data-i18n="navAbout">About</a>
+    <a href="#projects" data-i18n="navProjects">Projects</a>
+    <a href="#publications" data-i18n="navPublications">Publications</a>
+    <a href="#contact" data-i18n="navContact">Contact</a>
+  </nav>
 
-<script>
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark it active
-  menuAnchor.parent().addClass('active');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
-});
-</script>
-
-
-<div class="container-fluid main-container">
-
-<!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
-
-<!-- code folding -->
-
-
-
-
-
-
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Jakob A. Dambon</a>
+  <div class="controls">
+    <div class="lang-switch">
+      <button type="button" data-lang="en" onclick="setLanguage('en')">EN</button>
+      <button type="button" data-lang="de" onclick="setLanguage('de')">DE</button>
     </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li>
-  <a href="research.html">Research</a>
-</li>
-<li>
-  <a href="CV.html">CV</a>
-</li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="mailto:jakob.dambon@math.uzh.ch">
-    <span class="fa fa-envelope fa-lg"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="https://github.com/jakobdambon">
-    <span class="fa fa-github fa-lg"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="https://twitter.com/JakobDambon">
-    <span class="fa fa-twitter fa-lg"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="https://www.linkedin.com/in/jakob-dambon-141188108/">
-    <span class="fa fa-linkedin fa-lg"></span>
-     
-  </a>
-</li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
+    <button id="top-button" type="button" onclick="scrollToTop()" aria-label="Back to top">Top</button>
+    <button onclick="toggleTheme()">🌙</button>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </div>
+</header>
+  <main id="main">
 
-<div class="fluid-row" id="header">
+  <!-- HERO -->
+  <section>
+    <h1 data-i18n="heroTitle">Data Scientist</h1>
+    <p data-i18n="heroSubtitle">Specializing in spatial statistics and applied AI in insurance and risk modeling.</p>
+  </section>
 
+  <!-- ABOUT -->
+  <section id="about">
+    <h2 data-i18n="aboutTitle">About</h2>
+    <ul>
+      <li data-i18n="about1">AI/GenAI lead for insurance with proven claims automation, pricing, and portfolio analytics delivery.</li>
+      <li data-i18n="about2">Experienced in scaling AI across business units and aligning initiatives with senior stakeholders.</li>
+      <li data-i18n="about3">Strong team leader who mentors talent and builds high-performing data science teams.</li>
+      <li data-i18n="about4">PhD in Biostatistics focused on applied machine learning and statistical modeling.</li>
+    </ul>
+  </section>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2 data-i18n="projectsTitle">Projects</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3 data-i18n="project1Title">Claims Processing</h3>
+        <p data-i18n="project1Desc">Since 2024: Developing a GenAI-driven claims intake pipeline for Swiss Re Corporate Solutions.</p>
+      </div>
 
+      <div class="card">
+        <h3 data-i18n="project2Title">Cargo Insurance</h3>
+        <p data-i18n="project2Desc">2023 - 2024: Designing a risk-based cargo pricing model.</p>
+      </div>
 
-<h1 class="title toc-ignore">Welcome to My Website!</h1>
+      <div class="card">
+        <h3 data-i18n="project3Title">Spatial Real Estate Analysis</h3>
+        <p data-i18n="project3Desc">2018 - 2020: Research on spatial statistics applied to Swiss real estate markets.</p>
+      </div>
 
-</div>
+      <div class="card">
+        <h3 data-i18n="project5Title">Computational Statistics</h3>
+        <p data-i18n="project5Desc">2017 - 2021: PhD research on spatial statistics methods, cumulating in the R package <a href="https://cran.r-project.org/package=varycoef" target="_blank" rel="noopener noreferrer">varycoef</a>.</p>
+      </div>
 
+      <div class="card">
+        <h3 data-i18n="project4Title">Data Science with Swiss Cantonal Bank</h3>
+        <p data-i18n="project4Desc">2017 - 2021: Machine learning applications for third-party wealth estimation, credit risk assessment, and cross-selling opportunities.</p>
+      </div>
+    </div>
+  </section>
 
-<style>
-  
-  
-  .column {
-    float: left;
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <h2 data-i18n="publicationsTitle">Publications & Talks</h2>
+    <div class="card">
+      <p><strong data-i18n="pub1Title">Multiple Presentations</strong></p>
+      <p data-i18n="pub1Desc">Insurance Data Science Conference; 2022, 2024, 2025</p>
+    </div>
+
+    <div class="card">
+      <p><strong data-i18n="pub2Title">Vessel Accumulation Dashboard</strong></p>
+      <p data-i18n="pub2Desc">Swiss Conference on Data Science, 2023</p>
+      <p data-i18n="pub2Extra">awarded <i>Best Business Submission</i></p>
+    </div>
+
+    <div class="card">
+      <p><strong data-i18n="pub3Title">Multiple Publications</strong></p>
+      <p data-i18n="pub3Desc">For more information, please see my publications on <a href="https://scholar.google.com/citations?user=K6N8PfYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">  
+    <h2 data-i18n="contactTitle">Contact</h2>
+    <p data-i18n="contactIntro">Best way to reach me is via the form below.</p>
+    <p data-i18n="contactEmail">E-Mail: contact [at] dambon [dot] me</p>
+    <p><span data-i18n="contactLinkedIn">LinkedIn:</span> <a href="https://linkedin.com/in/jakob-dambon/" target="_blank" rel="noopener noreferrer">linkedin.com/in/jakob-dambon</a></p>
+    <p><span data-i18n="contactGitHub">GitHub:</span> <a href="https://github.com/jakobdambon" target="_blank" rel="noopener noreferrer">github.com/jakobdambon</a></p>
+  </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Jakob Dambon</p>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        navAbout: "About",
+        navProjects: "Projects",
+        navPublications: "Publications",
+        navContact: "Contact",
+        heroTitle: "Data Scientist",
+        heroSubtitle: "Solving real-world problems with AI — from GenAI to machine learning — and teaching the next generation at ETH.",
+        aboutTitle: "About",
+        about1: "AI/GenAI lead for insurance with proven claims automation, pricing, and portfolio analytics delivery.",
+        about2: "Experienced in scaling AI across business units and aligning initiatives with senior stakeholders.",
+        about3: "Strong team leader who mentors talent and builds high-performing data science teams.",
+        about4: "PhD in Biostatistics focused on applied machine learning and statistical modeling.",
+        projectsTitle: "Projects",
+        project1Title: "Claims Processing",
+        project1Desc: "Since 2024: Developing a GenAI-driven claims intake pipeline for Swiss Re Corporate Solutions.",
+        project2Title: "Cargo Insurance",
+        project2Desc: "2023 - 2024: Designing a risk-based cargo pricing model.",
+        project3Title: "Spatial Real Estate Analysis",
+        project3Desc: "2018 - 2020: Research on spatial statistics applied to Swiss real estate markets.",
+        project4Title: "Data Science with Swiss Cantonal Bank",
+        project4Desc: "2017 - 2021: Machine learning applications for third-party wealth estimation, credit risk assessment, and cross-selling opportunities.",
+        project5Title: "Computational Statistics",
+        project5Desc: "2017 - 2021: PhD research on spatial statistics methods, cumulating in the R package <a href=\"https://cran.r-project.org/package=varycoef\" target=\"_blank\" rel=\"noopener noreferrer\">varycoef</a>.",
+        publicationsTitle: "Publications & Talks",
+        pub1Title: "Multiple Presentations",
+        pub1Desc: "Insurance Data Science Conference; 2022, 2024, 2025",
+        pub2Title: "Vessel Accumulation Dashboard",
+        pub2Desc: "Swiss Conference on Data Science, 2023",
+        pub2Extra: "awarded <i>Best Business Submission</i>",
+        pub3Title: "Multiple Publications",
+        pub3Desc: "For more information, please see my publications on <a href=\"https://scholar.google.com/citations?user=K6N8PfYAAAAJ&hl=en\" target=\"_blank\" rel=\"noopener noreferrer\">Google Scholar</a>.",
+        contactTitle: "Contact",
+        contactIntro: "Best way to reach me is via the form below.",
+        contactEmail: "E-Mail: contact [at] dambon [dot] me",
+        contactLinkedIn: "LinkedIn:",
+        contactGitHub: "GitHub:",
+      },
+      de: {
+        navAbout: "Über mich",
+        navProjects: "Projekte",
+        navPublications: "Publikationen",
+        navContact: "Kontakt",
+        heroTitle: "Datenwissenschaftler",
+        heroSubtitle: "Ich löse reale Probleme mit KI — von GenAI bis Machine Learning — und lehre die nächste Generation an der ETH.",
+        aboutTitle: "Über mich",
+        about1: "AI/GenAI-Leiter im Versicherungsbereich mit nachweislichen Erfolgen in Schadensautomatisierung, Pricing und Portfolio-Analytics.",
+        about2: "Erfahren im Skalieren von KI-Initiativen über Geschäftsbereiche und in der Abstimmung mit Führungskräften.",
+        about3: "Starker Teamleiter, der Talente fördert und leistungsstarke Data-Science-Teams aufbaut.",
+        about4: "Doktorat in Biostatistik mit Schwerpunkt auf angewandtem Machine Learning und statistischer Modellierung.",
+        projectsTitle: "Projekte",
+        project1Title: "Schadensbearbeitung",
+        project1Desc: "Seit 2024: Entwicklung einer GenAI-gesteuerten Schadenserfassungspipeline für Swiss Re Corporate Solutions.",
+        project2Title: "Transportversicherung",
+        project2Desc: "2023 - 2024: Konzeption eines risikobasierten Frachtrating-Modells.",
+        project3Title: "Räumliche Immobilienanalyse",
+        project3Desc: "2018 - 2020: Forschung zur räumlichen Statistik in Schweizer Immobilienmärkten.",
+        project4Title: "Data Science bei einer Kantonalbank",
+        project4Desc: "2017 - 2021: Machine-Learning-Anwendungen für Drittvermögensschätzung, Kreditrisikoanalyse und Cross-Selling.",
+        project5Title: "Computational Statistics",
+        project5Desc: "2017 - 2021: PhD-Forschung zu räumlichen Statistikmethoden mit dem R-Paket <a href=\"https://cran.r-project.org/package=varycoef\" target=\"_blank\" rel=\"noopener noreferrer\">varycoef</a>.",
+        publicationsTitle: "Publikationen & Vorträge",
+        pub1Title: "Mehrere Präsentationen",
+        pub1Desc: "Insurance Data Science Conference; 2022, 2024, 2025",
+        pub2Title: "Vessel Accumulation Dashboard",
+        pub2Desc: "Swiss Conference on Data Science, 2023",
+        pub2Extra: "ausgezeichnet mit <i>Best Business Submission</i>",
+        pub3Title: "Mehrere Publikationen",
+        pub3Desc: "Weitere Informationen finden Sie auf <a href=\"https://scholar.google.com/citations?user=K6N8PfYAAAAJ&hl=en\" target=\"_blank\" rel=\"noopener noreferrer\">Google Scholar</a>.",
+        contactTitle: "Kontakt",
+        contactIntro: "Am besten erreichen Sie mich über das folgende Formular.",
+        contactEmail: "E-Mail: contact [at] dambon [dot] me",
+        contactLinkedIn: "LinkedIn:",
+        contactGitHub: "GitHub:",
+      }
+    };
+
+    function setLanguage(lang) {
+      const target = translations[lang] ? lang : "en";
+      localStorage.setItem("siteLang", target);
+      document.documentElement.lang = target;
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[target][key]) {
+          el.innerHTML = translations[target][key];
+        }
+      });
+      document.querySelectorAll(".lang-switch button").forEach((button) => {
+        button.classList.toggle("active", button.dataset.lang === target);
+      });
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute("data-theme");
+      document.documentElement.setAttribute(
+        "data-theme",
+        current === "dark" ? "light" : "dark"
+      );
+    }
+
+    function toggleMenu() {
+      const nav = document.getElementById("nav");
+      const btn = document.querySelector(".menu-btn");
+      nav.classList.toggle("active");
+      if (btn) {
+        btn.classList.toggle("open");
+        btn.setAttribute('aria-expanded', nav.classList.contains('active'));
+      }
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedLang = localStorage.getItem("siteLang");
+      const browserLang = navigator.language?.startsWith("de") ? "de" : "en";
+      setLanguage(savedLang || browserLang);
+    });
+  </script>
+
+  <!-- Structured data (Person + Website) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jakob A. Dambon",
+    "jobTitle": "Data Scientist",
+    "url": "https://dambon.me/",
+    "sameAs": [
+      "https://linkedin.com/in/jakob-dambon/",
+      "https://github.com/jakobdambon",
+      "https://scholar.google.com/citations?user=K6N8PfYAAAAJ&hl=en"
+    ]
   }
-  
-  .left {
-      width: 66%;
-      padding-right: 3em;
-
-  }
-  
-  .right {
-      width: 34%;
-  }
-  
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  .twitter-timeline {
-    height: 400px !important;
-  }
-  
-  img {
-    border-radius: 50%;
-  }
-  
-</style>
-<div class="row">
-<div class="column left">
-<h2 id="let-me-introduce-myself">Let Me Introduce Myself</h2>
-<p>I am a statistician and PhD candidate in Biostatistics at the <em>University of Zurich</em> (UZH), Switzerland. My research interests lie in spatial and spatio-temporal statistics, both with frequentest and Bayesian approaches. My supervisor is <a href="https://www.math.uzh.ch/index.php?id=people&amp;id=people&amp;key1=4087&amp;L=1">Prof. Dr. Reinhard Furrer</a> from the Institute of Mathematics, UZH. In joint work with the <em>Lucerne University of Applied Sciences and Arts</em> (HSLU), I am currently working on modelling house market prizes. Here, my supervisor is <a href="https://www.hslu.ch/en/lucerne-university-of-applied-sciences-and-arts/about-us/people-finder/profile/?pid=3064">Dr. Fabio Sigrist</a>.</p>
-<p>Furthermore, I am a research assistant at the <em>Lucerne School of Business</em> which is part of HSLU. I work on projects covering Data Analytics, statistical analysis and implementations of Machine Learning methods. I share my experience with colleagues at the Machine Learning Clinic and Spatial Data Analytics expert group organized by the Swiss Alliance for Data-Intensive Services.</p>
-<p>I am an <a href="https://www.r-project.org/">R</a> enthusiast and an active participant at the Zurich R User Group meet-ups.</p>
-<h2 id="overview-of-my-affiliations">Overview of My Affiliations</h2>
-<ul>
-<li><a href="https://www.math.uzh.ch/as/">Applied Statistics Workgroup, UZH</a></li>
-<li><a href="https://www.math.uzh.ch/index.php?id=home">Institute of Mathematics, UZH</a></li>
-<li><a href="https://www.hslu.ch/de-ch/wirtschaft/institute/ifz">Lucerne School of Business, HSLU</a> (website in German)</li>
-<li><a href="https://data-service-alliance.ch">Swiss Alliance for Data-Intensive Services</a></li>
-<li><a href="https://www.meetup.com/Zurich-R-User-group/">Zurich R User Group</a></li>
-</ul>
-</div>
-<div class="column right">
-<p><img src="me.jpg" alt="Avatar"></p>
-<a class="twitter-timeline" data-height="400" href="https://twitter.com/JakobDambon?ref_src=twsrc%5Etfw">Tweets by JakobDambon</a>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-</div>
-
-<div id = "footer", font-color = "Gray">
-<center><font color = "gray">Copyright &copy 2018, Jakob A. Dambon, All rights reserved.</font></center>
-</div>
-
-
-
-</div>
-
-<script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
-
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
+  </script>
 
 </body>
 </html>
