@@ -1,0 +1,4 @@
+# robots.txt for your site
+User-agent: *
+Allow: /
+Sitemap: https://dambon.me/sitemap.xml
